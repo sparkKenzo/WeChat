@@ -1,0 +1,65 @@
+@import "./common";
+@import "./header";
+@import "./footer";
+body{
+  background: #f8f8f8;
+}
+#main{
+  position: relative;
+  width: 12rem;
+  margin: 30px auto;
+  padding: 30px 40px;
+  box-shadow: 0 1px 3px 0 rgba(201, 200, 200, 0.35);
+  background: #fff;
+  .map{
+    position: absolute;
+    top:.4rem;
+    right:.3rem;
+    width:6.86rem;
+    height: 5.66rem;
+    background: url("../res/contactUs/chinesemap.png") no-repeat;
+    background-size: 100% 100%;
+  }
+  .lists{
+    position: relative;
+    z-index: 2;
+    color:#333;
+    .list-item{
+      padding-bottom: .2rem;
+      border-bottom: 1px solid #ededed;
+      &+.list-item{
+        margin-top: .2rem;
+      }
+      &.active .title{
+        color:#3c8dfc;
+      }
+      .title{
+        margin-bottom: .1rem;
+        font-size: .18rem;
+        font-weight: bold;
+      }
+      .info{
+        font-size:.16rem;
+        line-height: .32rem;
+        padding-left: .36rem;
+        background:url("../res/contactUs/location-ico.png") 0 center no-repeat;
+        background-size: .16rem .16rem;
+        &.zipcode{
+          background-image: url("../res/contactUs/zipcode-ico.png");
+        }
+        &.phone{
+          background-image: url("../res/contactUs/phone-ico.png");
+        }
+        &.fax{
+          background-image: url("../res/contactUs/fax-ico.png");
+        }
+        &.customer-service{
+          background-image: url("../res/contactUs/custom-service-ico.png");
+        }
+        &.url{
+          background-image: url("../res/contactUs/url-ico.png");
+        }
+      }
+    }
+  }
+}

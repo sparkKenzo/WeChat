@@ -1,0 +1,33 @@
+module.exports={
+    database:{
+        host:"localhost",
+        port:"3306",
+        database:"yunmis",
+        user:"root",
+        password:"admin"
+    },
+    wechat:{
+        appID:"wx847eeb267f845616",
+        appSecret:"b2448d99ecd929427ceda76ea4986fe5",
+        token:"WXToken20180518yinhaicom",
+        apiDomain:"https://api.weixin.qq.com/",
+        apiURL:{
+            //基础接口的access_token
+            "accessTokenApi":"%scgi-bin/token?grant_type=client_credential&appid=%s&secret=%s",
+            //自定义创建菜单
+            "createMenu":"%scgi-bin/menu/create?access_token=%s",
+            //网页授权的access_token
+            "authAccessToken":"%ssns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code",
+            //拉取用户信息
+            "userInfo":"%ssns/userinfo?access_token=%s&openid=%s&lang=zh_CN",
+            //创建二维码ticket
+            "qrcodeTicket":"%scgi-bin/qrcode/create?access_token=%s",
+            //通过ticket换取二维码
+            "showQRcode":"https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=%s",
+            //客服接口-发送消息
+            "customerService":"%scgi-bin/message/custom/send?access_token=%s",
+            //获取jsapi_ticket
+            "jsapiTicket":"%scgi-bin/ticket/getticket?access_token=%s&type=jsapi"
+        }
+    },
+};

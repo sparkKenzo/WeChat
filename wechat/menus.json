@@ -1,0 +1,45 @@
+{
+  "button":[
+    {
+      "name":"会员相关",
+      "sub_button":[
+        {
+          "type":"view",
+          "name":"会员信息",
+          "url":"http://758mhy.natappfree.cc/pharmacyMember/index.html"
+        },
+        {
+          "type":"view",
+          "name":"促销信息",
+          "url":"http://758mhy.natappfree.cc/pharmacyMember/index.html#/promotion"
+        },
+        {
+          "type":"view",
+          "name":"商品展示",
+          "url":"http://758mhy.natappfree.cc/pharmacyMember/index.html#/commodity"
+        }
+      ]
+    },
+    {
+      "type":"view",
+      "name":"测试二",
+      "url":"http://20100214.nat100.top/test.html"
+    },
+    {
+      "name":"小工具",
+      "sub_button":[{
+        "type": "scancode_waitmsg",
+        "name": "扫一扫",
+        "key": "scancode"
+      },{
+        "type": "pic_sysphoto",
+        "name": "系统拍照发图",
+        "key": "take_photo"
+      },{
+        "type": "location_select",
+        "name": "发送位置",
+        "key": "send_location"
+      }]
+    }
+  ]
+}

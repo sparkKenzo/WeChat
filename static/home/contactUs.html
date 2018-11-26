@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/contactUs.css">
+    <script src="./public/js/rem.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div id="main">
+    <div class="map"></div>
+    <ul class="lists">
+        <li class="list-item">
+            <p class="title">四川久远银海软件股份有限公司</p>
+            <p class="info">总部地址:成都市锦江区三色路163号银海芯座</p>
+            <p class="info zipcode">邮编：610063</p>
+            <p class="info phone">电话：028-65511666</p>
+            <p class="info fax">传真：028-6551611</p>
+            <p class="info customer-service">客户服务热线：800-886-3333</p>
+            <p class="info customer-service">两定服务热线：400-0669-222</p>
+            <p class="info phone">投资者联系电话：028-65516146</p>
+            <p class="info url">网址:www.yinhai.com</p>
+        </li>
+    </ul>
+</div>
+<div id="footer"></div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script>
+    var data=[
+        {
+            name:"北京",
+            addr:"地址：北京市海淀区花园路6号应物会议中心41号科研楼",
+            zipcode:"邮编：100088",
+            phone:"电话：010-82034514"
+        },{
+            name:"上海",
+            addr:"地址：上海市中山西路999号华闻国际大厦1213室",
+            zipcode:"邮编：200051",
+            phone:"电话：021-62730366"
+        },{
+            name:"广州",
+            addr:"地址：广州市天河区建中路64-66号佳都商务大厦东塔402室",
+            zipcode:"邮编：510665",
+            phone:"电话：020-85621463"
+        },{
+            name:"天津",
+            addr:"地址：天津市和平区大沽北路157号国投大厦2701室",
+            zipcode:"邮编：300040",
+            phone:"电话：022-23132675-8011"
+        },{
+            name:"重庆",
+            addr:"地址：重庆市大渡口区春晖路街道翠柏路101号天安数码城•云谷2栋504号",
+            zipcode:"邮编：400084",
+            phone:"电话：023-68196656"
+        },{
+            name:"昆明",
+            addr:"地址：昆明市盘龙区穿金路188号金尚国际13幢A座27楼",
+            zipcode:"邮编：650200",
+            phone:"电话：0871-65629158"
+        },{
+            name:"贵阳",
+            addr:"地址：贵阳市云岩区河西路国贸大厦1501室",
+            zipcode:"邮编：550001",
+            phone:"电话：0851-85952697"
+        },{
+            name:"拉萨",
+            addr:"地址：拉萨市罗堆东路卫生厅第三安居小区",
+            zipcode:"邮编：850000",
+            phone:"电话：0891-6766505"
+        },{
+            name:"绵阳",
+            addr:"地址：绵阳市涪城区绵安路35号软件产业园B区三楼",
+            zipcode:"邮编：621000",
+            phone:"电话：18981171920"
+        },{
+            name:"西安",
+            addr:"地址：西安市碑林区火炬路7号东新世纪广场9层B座10912室",
+            zipcode:"邮编：710043",
+            phone:"电话：029-82284382"
+        },{
+            name:"乌鲁木齐",
+            addr:"地址：乌鲁木齐市高新区高新街盈科公寓B座610室",
+            zipcode:"邮编：830000",
+            phone:"电话：0991-3831051"
+        },{
+            name:"武汉",
+            addr:"地址：武汉市武昌区水果湖路汉街万达总部国际B座1604/1605室",
+            zipcode:"邮编：430072",
+            phone:"电话：027-87250980"
+        },{
+            name:"南宁",
+            addr:"地址：南宁市青秀区民族大道83-6号麻村时代广场15楼3-2号",
+            zipcode:"邮编：530022",
+            phone:"电话：0771-5711403"
+        },{
+            name:"海口",
+            addr:"地址：海口市龙华区国贸三横路9号2栋402室",
+            zipcode:"邮编：570102",
+            phone:"电话：18628103660"
+        },{
+            name:"福建",
+            addr:"地址：龙岩市新罗区南城溪畔路8号1号楼401室",
+            zipcode:"邮编：364000",
+            phone:"电话：020-85621463"
+        },{
+            name:"哈尔滨",
+            addr:"地址：哈尔滨市南岗区红旗大街235号投资大厦7楼A座",
+            zipcode:"邮编：150030",
+            phone:"电话：0451-82269392/82365838"
+        },{
+            name:"长春",
+            addr:"地址：长春市南关区解放大路财富广场c座1510室",
+            zipcode:"邮编：130000",
+            phone:"电话：0431-87059951"
+        },{
+            name:"太原",
+            addr:"地址：太原市南中环街401号山西数码港A座2层",
+            zipcode:"邮编：03006",
+            phone:"电话：0351-7025662"
+        }
+    ];
+    function init(){
+        var str="";
+        for(var i=0;i<data.length;i++){
+            str+='<li class="list-item">';
+            str+='<p class="title">'+data[i].name+'</p>';
+            str+='<p class="info">'+data[i].addr+'</p>';
+            str+='<p class="info zipcode">'+data[i].zipcode+'</p>';
+            str+='<p class="info phone">'+data[i].phone+'</p>';
+            str+='</li>';
+        }
+        $("#main .lists").append(str);
+    }
+    $(function () {
+        $("#header").load('./public/html/header.html',function () {
+            //添加导航选中状态
+            $("#header .contact-us").addClass("active");
+        });
+        $("#footer").load('./public/html/footer.html');
+        //初始化页面结构
+        init();
+        $("body").on("scroll",function () {
+            var left=$("#main .map").get(0).getBoundingClientRect().left,
+                headerHeight=$("#header").height(),
+                scrollTop=$(this).get(0).scrollTop,
+                allHeight=$("#main").height()+headerHeight+60,
+                $map=$("#main .map");
+            if(scrollTop>headerHeight){
+                $map.css({position:"fixed",top:"10px",left:left});
+                if(allHeight<$map.height()+scrollTop+10){
+                    $map.css({position:"absolute",top:"auto",bottom:30,left:"auto",right:"0.3rem"});
+                }
+            }else{
+                $map.css({position:"absolute",top:"0.4rem",left:"auto"});
+            }
+            $(".lists .list-item").each(function (i,item) {
+                var relScrollTop=scrollTop-headerHeight-60;
+                if(relScrollTop>item.offsetTop-40 && relScrollTop <item.offsetTop+item.offsetHeight-40){
+                    $(this).addClass("active").siblings().removeClass("active");
+                    return false;
+                }
+            });
+        })
+    })
+</script>
+</html>

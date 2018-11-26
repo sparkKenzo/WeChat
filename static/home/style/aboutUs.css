@@ -1,0 +1,603 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background: none;
+  font-family: "Microsoft YaHei", Serif, Georgia, "Times New Roman" !important;
+}
+a {
+  text-decoration: none;
+}
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+/*
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+  html {
+    font-size: 66.7px !important;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  html {
+    font-size: 80px !important;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1900px) {
+  html {
+    font-size: 90px !important;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  html {
+    font-size: 100px !important;
+  }
+}*/
+#header .nav {
+  width: 100%;
+  height: .8rem;
+  background: #1a2762;
+  font-size: 0;
+}
+#header .nav .logo {
+  width: 3.5rem;
+  height: .8rem;
+  margin-right: .4rem;
+  line-height: .8rem;
+  font-size: .3rem;
+  color: #ffffff;
+  padding-left: 1.05rem;
+  float: left;
+  background: url("../res/logo.png") 0.5rem center no-repeat;
+  background-size: .4rem .32rem;
+}
+#header .nav .about {
+  float: left;
+  height: .8rem;
+  line-height: .8rem;
+}
+#header .nav .about a {
+  display: inline-block;
+  width: 1.2rem;
+  font-size: .18rem;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  color: #ffffff;
+}
+#header .nav .about a.active {
+  background: #1B82F5;
+  background: linear-gradient(#1B82F5, #1a2762);
+  background: -webkit-linear-gradient(#1B82F5, #1a2762);
+  background: -moz-linear-gradient(#1B82F5, #1a2762);
+}
+#header .nav .btn-box {
+  float: right;
+  width: 3.6rem;
+  height: .8rem;
+  text-align: right;
+}
+#header .nav .btn-box > a {
+  display: inline-block;
+  width: 1.6rem;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  font-size: .18rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+#header .nav .btn-box .sign_btn {
+  background: #1B82F5;
+}
+.footer {
+  width: 100%;
+  background: #2E323B;
+  font-size: 0;
+}
+.footer .contact-box {
+  width: 100%;
+  height: 2.60rem;
+}
+.footer .contact-box > div {
+  width: 50%;
+  height: 2.60rem;
+  float: left;
+}
+.footer .contact-box > div.left-contact-box {
+  padding-top: .78rem;
+}
+.footer .contact-box > div.left-contact-box .customer-service {
+  float: right;
+  width: 4.00rem;
+  height: 1.40rem;
+  background: url("../res/kf.png") no-repeat left top;
+  margin-right: .35rem;
+  padding: .03rem 0 0 .85rem;
+}
+.footer .contact-box > div.left-contact-box .customer-service .phone-box {
+  width: 3.15rem;
+  height: 1.37rem;
+  color: #ffffff;
+  padding-top: .07rem;
+  border-right: 1px solid #565656;
+}
+.footer .contact-box > div.left-contact-box .customer-service .phone-box p {
+  font-size: .16rem;
+  margin-bottom: .15rem;
+}
+.footer .contact-box > div.left-contact-box .customer-service .phone-box p.p2 {
+  font-size: .14rem;
+  margin-bottom: .30rem;
+}
+.footer .contact-box > div.left-contact-box .customer-service .phone-box h3 {
+  font-weight: normal;
+  font-size: .36rem;
+  border: none;
+  background: none;
+}
+.footer .contact-box > div.right-contact-box {
+  padding-left: .50rem;
+}
+.footer .contact-box > div.right-contact-box > div {
+  float: left;
+}
+.footer .contact-box > div.right-contact-box > div.address-box {
+  width: 2.60rem;
+  height: 2.60rem;
+  padding-top: .78rem;
+}
+.footer .contact-box > div.right-contact-box > div.address-box > div {
+  width: 2.60rem;
+  height: 1.40rem;
+  padding-top: .03rem;
+}
+.footer .contact-box > div.right-contact-box > div.address-box > div > p {
+  font-size: .14rem;
+  color: #ffffff;
+  margin-bottom: .21rem;
+}
+.footer .contact-box > div.right-contact-box > div.qr-box {
+  width: 1.20rem;
+  height: 2.60rem;
+  padding-top: .45rem;
+}
+.footer .contact-box > div.right-contact-box > div.qr-box p {
+  font-size: .16rem;
+  margin-bottom: .15rem;
+  color: #ffffff;
+}
+.footer .copyright-box {
+  width: 100%;
+  height: 1.07rem;
+  padding-top: .37rem;
+}
+.footer .copyright-box p {
+  font-size: .14rem;
+  color: #ffffff;
+  text-align: center;
+}
+#main .bannner {
+  position: relative;
+  height: 5.2rem;
+  background: url("../res/aboutUs/banner.png") no-repeat;
+  background-size: 100% 100%;
+}
+#main .bannner .nav-links {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .24rem;
+  color: #1a2560;
+  text-align: center;
+}
+#main .bannner .nav-links.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+#main .bannner .nav-links .nav-link {
+  display: inline-block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0 .95rem;
+  height: .8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+#main .bannner .nav-links .nav-link.active,
+#main .bannner .nav-links .nav-link:hover {
+  color: #1b82f5;
+  border-bottom: 4px solid #1b82f5;
+}
+#main .bannner .nav-links-bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: .8rem;
+  background: #bfd4e9;
+  opacity: 0.15;
+}
+#main .contents {
+  background: #fff;
+  margin-bottom: .3rem;
+}
+#main .contents > .content {
+  width: 12rem;
+  margin: 0 auto;
+}
+#main .contents > .content > .header {
+  padding: .5rem 0 .4rem;
+  text-align: center;
+  font-size: 0;
+}
+#main .contents > .content > .header .title {
+  font-size: .3rem;
+  color: #333;
+}
+#main .contents > .content.company-brief .brief-title {
+  margin-bottom: .2rem;
+  font-size: .22rem;
+  color: #3c8dfc;
+  text-align: center;
+}
+#main .contents > .content.company-brief .brief-detail {
+  font-size: .18rem;
+  line-height: .36rem;
+  color: #333;
+  text-indent: 2em;
+}
+#main .contents > .content.company-brief .intr-title {
+  margin: .4rem 0 .3rem;
+  padding-left: .1rem;
+  font-size: .26rem;
+  color: #333;
+  border-left: 10px solid #3c8dfc;
+}
+#main .contents > .content.company-brief .intr-content {
+  height: 4.5rem;
+}
+#main .contents > .content.company-brief .intr-content:after {
+  display: block;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+#main .contents > .content.company-brief .intr-content > li {
+  position: relative;
+  float: left;
+  width: 20%;
+  height: .6rem;
+  line-height: .6rem;
+  color: #fff;
+  font-size: .18rem;
+  background: #3c8dfc;
+  text-align: center;
+}
+#main .contents > .content.company-brief .intr-content > li:nth-child(even) {
+  background: #1b82f5;
+}
+#main .contents > .content.company-brief .intr-content > li:nth-child(even) .detail-list {
+  background: #edf5fe;
+}
+#main .contents > .content.company-brief .intr-content > li .detail-list {
+  position: absolute;
+  top: .6rem;
+  left: 0;
+  width: 100%;
+  height: 3.9rem;
+  padding: .3rem;
+  color: #333;
+  background: #f8f8f8;
+}
+#main .contents > .content.company-brief .intr-content > li .detail-list > li {
+  position: relative;
+  padding-left: 16px;
+  text-align: left;
+  line-height: .36rem;
+}
+#main .contents > .content.company-brief .intr-content > li .detail-list > li:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  background: #e4e4e4;
+  border-radius: 100%;
+}
+#main .contents > .content.company-culture {
+  background: url("../res/aboutUs/logo.png") center bottom no-repeat;
+  background-size: 4.9rem 3.85rem;
+  font-size: .18rem;
+  line-height: .26rem;
+  color: #555;
+  text-align: center;
+}
+#main .contents > .content.company-culture > .detail {
+  font-size: 0;
+}
+#main .contents > .content.company-culture > .detail > div {
+  display: inline-block;
+  vertical-align: bottom;
+}
+#main .contents > .content.company-culture > .detail > div > p {
+  font-size: .18rem;
+  text-align: left;
+  line-height: .3rem;
+}
+#main .contents > .content.company-culture > .detail > div.left {
+  width: 3rem;
+  padding: .3rem;
+  border: 1px dotted #f8b257;
+  border-radius: 5px;
+}
+#main .contents > .content.company-culture > .detail > div.left .title {
+  color: #333;
+}
+#main .contents > .content.company-culture > .detail > div.right {
+  width: 3rem;
+  padding: .3rem;
+  border: 1px dotted #39ce7f;
+  border-radius: 5px;
+}
+#main .contents > .content.company-culture > .detail > div.middle {
+  position: relative;
+  padding: .18rem .44rem;
+}
+#main .contents > .content.company-culture > .detail > div.middle::before {
+  display: block;
+  content: "";
+  width: .44rem;
+  height: 1px;
+  background: #f8b257;
+  position: absolute;
+  left: 0;
+  bottom: 1.04rem;
+}
+#main .contents > .content.company-culture > .detail > div.middle::after {
+  display: block;
+  content: "";
+  width: .44rem;
+  height: 1px;
+  background: #39ce7f;
+  position: absolute;
+  right: 0;
+  bottom: 1.04rem;
+}
+#main .contents > .content.company-culture > .detail > div.middle .block-item {
+  width: 2.02rem;
+  height: 1.74rem;
+  background: url("../res/aboutUs/1.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  overflow: hidden;
+  font-size: .16rem;
+  color: #fff;
+}
+#main .contents > .content.company-culture > .detail > div.middle .block-item .culture-title {
+  margin-top: .3rem;
+  margin-bottom: .36rem;
+  font-size: .24rem;
+}
+#main .contents > .content.company-culture > .detail > div.middle .top {
+  margin: 0 auto;
+}
+#main .contents > .content.company-culture > .detail > div.middle .bottom {
+  overflow: hidden;
+}
+#main .contents > .content.company-culture > .detail > div.middle .bottom > .block-item {
+  float: left;
+}
+#main .contents > .content.company-culture > .detail > div.middle .bottom > .block-item.left {
+  background-image: url("../res/aboutUs/2.png");
+}
+#main .contents > .content.company-culture > .detail > div.middle .bottom > .block-item.right {
+  background-image: url("../res/aboutUs/3.png");
+}
+#main .contents > .content.company-devlopment-path {
+  position: relative;
+  width: 100%;
+  height: 12rem;
+  margin-top: .5rem;
+  background: #f8f8f8;
+  text-align: center;
+}
+#main .contents > .content.company-devlopment-path .item {
+  font-size: 0;
+}
+#main .contents > .content.company-devlopment-path .item .info {
+  display: inline-block;
+  width: 3.76rem;
+  padding-top: .2rem;
+  text-indent: 2em;
+  font-size: .18rem;
+  line-height: .3rem;
+  color: #333;
+  vertical-align: top;
+}
+#main .contents > .content.company-devlopment-path .item .tag {
+  display: inline-block;
+  width: 2.1rem;
+  vertical-align: top;
+  font-size: 0;
+}
+#main .contents > .content.company-devlopment-path .item .tag .year {
+  display: inline-block;
+  width: 1.6rem;
+  padding-bottom: .1rem;
+  background: url("../res/aboutUs/tagy.png") right bottom no-repeat;
+  background-size: 100%;
+  font-size: .4rem;
+  color: #f8b257;
+  text-align: center;
+  vertical-align: bottom;
+}
+#main .contents > .content.company-devlopment-path .item .tag .circle {
+  display: inline-block;
+  width: .5rem;
+  height: .19rem;
+  background: url("../res/aboutUs/yellow.png") right bottom no-repeat;
+  background-size: .19rem 100%;
+  vertical-align: bottom;
+}
+#main .contents > .content.company-devlopment-path .item .tag-blue .year {
+  color: #3c8dfc;
+  background-image: url("../res/aboutUs/tagb.png");
+}
+#main .contents > .content.company-devlopment-path .item .tag-blue .circle {
+  background: url("../res/aboutUs/blue.png") left top no-repeat;
+  background-size: .19rem .19rem;
+  padding-bottom: .26rem;
+}
+#main .contents > .content.company-devlopment-path .detail {
+  width: 12rem;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+#main .contents > .content.company-devlopment-path .detail > div {
+  text-align: left;
+}
+#main .contents > .content.company-devlopment-path .detail > div.left {
+  width: 5.86rem;
+  position: absolute;
+  top: 1.8rem;
+  left: 50%;
+  margin-left: -5.78rem;
+}
+#main .contents > .content.company-devlopment-path .detail > div.right {
+  width: 5.86rem;
+  position: absolute;
+  top: 1.6rem;
+  left: 50%;
+  margin-left: -0.1rem;
+}
+#main .contents > .content.company-devlopment-path .detail > div.tree {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 9.45rem;
+  text-align: center;
+}
+#main .contents > .content.company-devlopment-path .detail > div.tree::before {
+  display: inline-block;
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: #a0c9f7;
+}
+#main .contents > .content.company-devlopment-path .detail > div.tree:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 27px;
+  bottom: -0.33rem;
+  width: 6px;
+  height: .33rem;
+  background: url("../res/aboutUs/omit.png") no-repeat;
+  background-size: 100% 100%;
+}
+#main .contents > .content.company-honor .detail {
+  overflow: hidden;
+}
+#main .contents > .content.company-honor .detail > div {
+  border: 1px solid #ddd;
+}
+#main .contents > .content.company-honor .detail > div .header {
+  height: .48rem;
+  line-height: .48rem;
+  padding-left: .2rem;
+  background: #f8f8f8;
+  font-size: .2rem;
+  color: #333;
+}
+#main .contents > .content.company-honor .detail > div.qualification {
+  float: left;
+  width: 5rem;
+}
+#main .contents > .content.company-honor .detail > div.qualification .content {
+  padding: .2rem;
+}
+#main .contents > .content.company-honor .detail > div.qualification .content > li {
+  position: relative;
+  padding-left: 16px;
+  text-align: left;
+  line-height: .4rem;
+  font-size: .18rem;
+}
+#main .contents > .content.company-honor .detail > div.qualification .content > li:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  background: #e4e4e4;
+  border-radius: 100%;
+}
+#main .contents > .content.company-honor .detail > div.award {
+  float: right;
+  width: 6.8rem;
+}
+#main .contents > .content.company-honor .detail > div.award .content {
+  margin-left: .2rem;
+  padding: .2rem 0;
+  border-left: 1px solid #9dc6fd;
+}
+#main .contents > .content.company-honor .detail > div.award .content > li {
+  position: relative;
+  padding-left: .4rem;
+  padding-right: .3rem;
+  text-align: left;
+  line-height: .3rem;
+  font-size: .18rem;
+}
+#main .contents > .content.company-honor .detail > div.award .content > li:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: .3rem;
+  height: 6px;
+  background: url("../res/aboutUs/directive.png") no-repeat;
+  background-size: 100% 100%;
+}
+/*# sourceMappingURL=aboutUs.css.map */

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Index</title>
+</head>
+<body>
+This is IndexPage.
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function parseSearchStr(str){
+        const reg=/[^?&=]+/gim;
+        const arr=str.match(reg);
+        const result={};
+        if(arr.length>0){
+            arr.forEach((item,index)=>{
+                if(index % 2 === 0){
+                    result[arr[index]]=arr[index+1]
+                }
+            })
+        }
+        return result;
+    }
+    const param=parseSearchStr(window.location.search);
+    /*axios.get("/getUserInfo",{
+        params:{
+            code:param.code
+        }
+    })
+    .then(res=>{
+        console.log(res);
+    });*/
+    const url=window.location.origin+window.location.pathname+window.location.search;
+    axios.post("/getwxjs",{
+        url:url
+    })
+    .then(res=>{
+        console.log(res["data"]);
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+@import "common";
+@import "header";
+@import "footer";
+#main{
+  .bannner{
+    position: relative;
+    height:5.2rem;
+    background: url("../res/aboutUs/banner.png") no-repeat;
+    background-size: 100% 100%;
+    .nav-links{
+      position: absolute;
+      bottom: 0;
+      z-index:2;
+      width: 100%;
+      height: .8rem;
+      line-height: .8rem;
+      font-size:.24rem;
+      color:#1a2560;
+      text-align: center;
+      &.fixed-top{
+        position: fixed;
+        top:0;
+        left: 0;
+        z-index: 100;
+        background: #fff;
+        border-bottom: 1px solid #ddd;
+      }
+      .nav-link{
+        display: inline-block;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        margin: 0 .95rem;
+        height: .8rem;
+        font-weight: 500;
+        cursor: pointer;
+        &.active,&:hover{
+          color:#1b82f5;
+          border-bottom: 4px solid #1b82f5;
+        }
+      }
+    }
+    .nav-links-bg{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: .8rem;
+      background: #bfd4e9;
+      opacity: 0.15;
+    }
+  }
+  .contents{
+    background: #fff;
+    margin-bottom: .3rem;
+    &>.content{
+      width:12rem;
+      margin: 0 auto;
+      &>.header{
+        padding: .5rem 0 .4rem;
+        text-align: center;
+        font-size: 0;
+        .title{
+          font-size: .3rem;
+          color:#333;
+        }
+      }
+      &.company-brief{
+        .brief-title{
+          margin-bottom: .2rem;
+          font-size: .22rem;
+          color:#3c8dfc;
+          text-align: center;
+        }
+        .brief-detail{
+          font-size:.18rem;
+          line-height: .36rem;
+          color: #333;
+          text-indent: 2em;
+        }
+        .intr-title{
+          margin: .4rem 0 .3rem;
+          padding-left: .1rem;
+          font-size: .26rem;
+          color:#333;
+          border-left: 10px solid #3c8dfc;
+        }
+        .intr-content{
+          height: 4.5rem;
+          &:after{
+            display: block;
+            content: ".";
+            height: 0;
+            visibility: hidden;
+            clear: both;
+          }
+          &>li{
+            position: relative;
+            float: left;
+            width:20%;
+            height:.6rem;
+            line-height: .6rem;
+            color:#fff;
+            font-size:.18rem;
+            background: #3c8dfc;
+            text-align: center;
+            &:nth-child(even){
+              background: #1b82f5;
+              .detail-list{
+                background: #edf5fe;
+              }
+            }
+            .detail-list{
+              position: absolute;
+              top:.6rem;
+              left: 0;
+              width:100%;
+              height: 3.9rem;
+              padding: .3rem;
+              color:#333;
+              background: #f8f8f8;
+              &>li{
+                position: relative;
+                padding-left: 16px;
+                text-align: left;
+                line-height: .36rem;
+                &:after{
+                  display: block;
+                  content: "";
+                  position: absolute;
+                  top:50%;
+                  left: 0;
+                  width:6px;
+                  height:6px;
+                  margin-top: -3px;
+                  background: #e4e4e4;
+                  border-radius: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.company-culture{
+        background: url("../res/aboutUs/logo.png") center bottom no-repeat;
+        background-size: 4.9rem 3.85rem;
+        font-size:.18rem;
+        line-height: .26rem;
+        color:#555;
+        text-align: center;
+        &>.detail{
+          font-size: 0;
+          &>div {
+            display: inline-block;
+            vertical-align: bottom;
+            &>p{
+              font-size:.18rem;
+              text-align: left;
+            }
+            &.left {
+              width: 3rem;
+              padding: .3rem;
+              border: 1px dotted #f8b257;
+              border-radius: 5px;
+              .title {
+                color: #333;
+              }
+            }
+            &.right {
+              width: 3rem;
+              padding: .3rem;
+              border: 1px dotted #39ce7f;
+              border-radius: 5px;
+            }
+            &.middle {
+              position: relative;
+              padding: .18rem .44rem;
+              &::before {
+                display: block;
+                content: "";
+                width: .44rem;
+                height: 1px;
+                background: #f8b257;
+                position: absolute;
+                left: 0;
+                bottom: 1.04rem;
+              }
+              &::after {
+                display: block;
+                content: "";
+                width: .44rem;
+                height: 1px;
+                background: #39ce7f;
+                position: absolute;
+                right: 0;
+                bottom: 1.04rem;
+              }
+              .block-item {
+                width: 2.02rem;
+                height: 1.74rem;
+                background: url("../res/aboutUs/1.png") no-repeat;
+                background-size: 100% 100%;
+                text-align: center;
+                overflow: hidden;
+                font-size: .16rem;
+                color: #fff;
+                .culture-title {
+                  margin-top: .3rem;
+                  margin-bottom: .36rem;
+                  font-size: .24rem;
+                }
+              }
+              .top {
+                margin: 0 auto;
+              }
+              .bottom {
+                overflow: hidden;
+                & > .block-item {
+                  float: left;
+                  &.left {
+                    background-image: url("../res/aboutUs/2.png");
+                  }
+                  &.right {
+                    background-image: url("../res/aboutUs/3.png");
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.company-devlopment-path{
+        position: relative;
+        width:100%;
+        height: 12rem;
+        margin-top: .5rem;
+        background: #f8f8f8;
+        text-align: center;
+        .item{
+          font-size: 0;
+          .info{
+            display: inline-block;
+            width:3.76rem;
+            padding-top: .2rem;
+            text-indent: 2em;
+            font-size:.18rem;
+            line-height: .3rem;
+            color:#333;
+            vertical-align: top;
+          }
+          .tag{
+            display: inline-block;
+            width:2.1rem;
+            vertical-align: top;
+            font-size: 0;
+            .year{
+              display: inline-block;
+              width:1.6rem;
+              padding-bottom: .1rem;
+              background: url("../res/aboutUs/tagy.png") right bottom no-repeat;
+              background-size: 100%;
+              font-size: .4rem;
+              color:#f8b257;
+              text-align: center;
+              vertical-align: bottom;
+            }
+            .circle{
+              display: inline-block;
+              width: .5rem;
+              height: .19rem;
+              background: url("../res/aboutUs/yellow.png") right bottom no-repeat;
+              background-size: .19rem 100%;
+              vertical-align: bottom;
+            }
+          }
+          .tag-blue{
+            .year{
+              color:#3c8dfc;
+              background-image: url("../res/aboutUs/tagb.png");
+            }
+            .circle{
+              background: url("../res/aboutUs/blue.png") left top no-repeat;
+              background-size: .19rem .19rem;
+              padding-bottom: .26rem;
+            }
+          }
+        }
+        .detail{
+          width:12rem;
+          margin: 0 auto;
+          overflow: hidden;
+          text-align: center;
+          &>div{
+            text-align: left;
+            &.left{
+              width:5.86rem;
+              position: absolute;
+              top:1.8rem;
+              left:50%;
+              margin-left: -5.78rem;
+            }
+            &.right{
+              width:5.86rem;
+              position: absolute;
+              top:1.6rem;
+              left:50%;
+              margin-left: -0.1rem;
+            }
+            &.tree{
+              position: relative;
+              display: inline-block;
+              width:60px;
+              height:9.45rem;
+              text-align: center;
+              &::before{
+                display: inline-block;
+                content: "";
+                width:6px;
+                height: 100%;
+                background: #a0c9f7;
+              }
+              &:after{
+                display: block;
+                content: "";
+                position: absolute;
+                left:27px;
+                bottom: -0.33rem;
+                width:6px;
+                height:.33rem;
+                background: url("../res/aboutUs/omit.png") no-repeat;
+                background-size: 100% 100%;
+              }
+            }
+          }
+        }
+      }
+      &.company-honor{
+        .detail{
+          overflow: hidden;
+          &>div{
+            border: 1px solid #ddd;
+            .header{
+              height: .48rem;
+              line-height: .48rem;
+              padding-left: .2rem;
+              background: #f8f8f8;
+              font-size: .2rem;
+              color:#333;
+            }
+            &.qualification{
+              float: left;
+              width: 5rem;
+              .content{
+                padding: .2rem;
+                &>li{
+                  position: relative;
+                  padding-left: 16px;
+                  text-align: left;
+                  line-height: .4rem;
+                  font-size: .18rem;
+                  &:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top:50%;
+                    left: 0;
+                    width:6px;
+                    height:6px;
+                    margin-top: -3px;
+                    background: #e4e4e4;
+                    border-radius: 100%;
+                  }
+                }
+              }
+            }
+            &.award{
+              float: right;
+              width: 6.8rem;
+              .content{
+                margin-left: .2rem;
+                padding: .2rem 0;
+                border-left: 1px solid #9dc6fd;
+                &>li{
+                  position: relative;
+                  padding-left: .4rem;
+                  text-align: left;
+                  line-height: .3rem;
+                  font-size: .18rem;
+                  &:after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top:10px;
+                    left: 0;
+                    width:.3rem;
+                    height:6px;
+                    background: url("../res/aboutUs/directive.png") no-repeat;
+                    background-size: 100% 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
